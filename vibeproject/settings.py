@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6br140)1%z7@e*hiv$z0^uecl5qb%9_vdc!dxp!6&0q--o3v@=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*','vibe-vision.onrender.com']
 
 
 # Application definition
