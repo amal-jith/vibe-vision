@@ -1,0 +1,26 @@
+.date-box {
+    display: inline-flex;
+    flex-direction: row; /* Change to row for horizontal layout */
+    align-items: flex-start;
+    gap: 1rem; /* Add some space between the day and the month */
+}
+
+.day {
+    color: #F5F5F5;
+    font-family: "Space Grotesk";
+    font-size: 2.875rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.875rem; /* 100% */
+    letter-spacing: -0.07188rem;
+}
+
+.month {
+    color: #F5F5F5;
+    font-family: "Space Grotesk";
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.125rem; /* 120% */
+    letter-spacing: 0.01406rem;
+}

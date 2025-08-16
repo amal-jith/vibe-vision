@@ -1,0 +1,818 @@
+* /* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+. {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+
+}
+
+body{
+    background: #000;
+}
+
+.top-bar {
+  height: 2.5rem;
+  background: rgba(0, 0, 0, 0.40);
+  padding: 0.25rem 6.25rem;
+}
+@media (max-width: 998px) {
+  .top-bar {
+    padding: 0.25rem 0rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+  .navbar {
+    margin-top: 0 !important;
+  }
+}
+
+.contact-info {
+  display: flex;
+  align-items: center; /* vertical centering for both items */
+  gap: 2.5rem; /* space between phone & email blocks */
+}
+
+.top-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.top-bar-item img {
+    width: 1rem;
+    height: 1rem;
+    aspect-ratio: 1/1;
+}
+
+.top-bar-text{
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 0.93688rem; /* 107.071% */
+    letter-spacing: 0.05156rem;
+}
+
+.social-icons{
+    display: flex;
+  align-items: center;
+    gap: 0.75rem;
+}
+.social-icons img{
+    width: 1.5rem;
+    height: 1.5rem;
+    aspect-ratio: 1/1;
+}
+.navbar{
+    /*margin-top: 2.5rem;*/
+    padding: 1rem 5rem;
+    transition: padding 0.3s ease, background-color 0.3s ease;
+    background-color: transparent !important;
+}
+@media (max-width: 998px) {
+  .navbar {
+    padding: 1rem 0rem;
+  }
+}
+
+.navbar.navbar-scrolled {
+  background-color: #000 !important;
+  padding: 0.5rem 5rem !important;
+}
+
+
+
+.v-logo{
+    width: 12.52681rem;
+    height: 4.3125rem;
+    aspect-ratio: 61/21;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+.navbar.compact-navbar {
+    padding: 0.5rem 5rem; /* Smaller padding */
+}
+
+@media (max-width: 991.98px) {
+  .navbar.compact-navbar {
+    padding: 0.5rem 1rem !important; /* Smaller padding on mobile when scrolled */
+  }
+}
+
+
+.navbar.compact-navbar .v-logo {
+    width: 8rem; /* Smaller logo width */
+    height: 2.7rem; /* Smaller logo height */
+}
+
+/* Ensure the navbar starts transparent
+.navbar:not(.navbar-scrolled) {
+  background-color: transparent !important;
+}*/
+
+.nav-link{
+    color: #FFF;
+    text-align: center;
+    font-family: "Space Grotesk";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.05156rem;
+    text-transform: uppercase;
+}
+.nav-link:hover{
+    color: #FFF;
+}
+
+.offcanvas{
+    background: rgba(0, 0, 0, 0.40);
+}
+
+
+
+/**HOME**/
+
+
+
+.card.header-card{
+    border: none;
+    background: none;
+}
+.card.header-card {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  min-height: 40rem;
+  /*height: 100vh;*/
+  height: 100dvh;
+}
+
+/* Video background styles remain the same */
+.card-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+/* New CSS for the gradient overlay */
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(242deg, #000 6.76%, rgba(0, 0, 0, 0.00) 24.86%),
+              linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, #000 100%),
+              linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 98.09%);
+}
+
+/* Text overlay styles remain the same but with z-index: 1 */
+.card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Push content to bottom */
+  align-items: flex-start;   /* Align content to left */
+  padding: 5rem;          /* Keep Bootstrap's default padding */
+}
+
+@media (max-width: 998px) {
+  .card-img-overlay {
+    padding: 1rem;
+  }
+}
+
+
+.hero-title{
+    color: #FFF;
+    font-family: "Michroma";
+    font-size: 5.25044rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 6.375rem; /* 121.418% */
+    text-transform: uppercase;
+    max-width: 83.625rem;
+    cursor: default;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 998px) {
+  .hero-title {
+   font-size: 3rem;
+   line-height: 4rem;
+  }
+}
+
+@media (max-width: 448px) {
+  .hero-title {
+   font-size: 2.5rem;
+   line-height: 3rem;
+  }
+}
+
+
+.hero-subtitle{
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    cursor: default;
+    margin-bottom: 1.5rem;
+}
+
+.btn.book-btn{
+    background: linear-gradient(93deg, rgba(126, 111, 61, 0.30) 2.76%, rgba(185, 173, 116, 0.30) 62.98%, rgba(244, 236, 171, 0.30) 144.03%);
+    color: #ffffff;
+    max-width: 15rem;
+    height: 4rem;
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    font-family: "Space Grotesk";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 0.93688rem; /* 93.687% */
+    letter-spacing: 0.05156rem;
+    text-transform: uppercase;
+    border-radius: 0 !important;
+
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 25px) 100%, 0 100%);
+}
+
+.service-section{
+    padding: 6.25rem 0;
+}
+
+.section-title{
+    font-family: "Michroma";
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.5rem; /* 140% */
+    letter-spacing: -0.0625rem;
+    color: #FFFFFF;
+    max-width: 87.5rem;
+    margin: 0 12.25rem;
+}
+
+@media (max-width: 998px) {
+  .section-title {
+   margin: 0 1rem;
+  }
+}
+
+@media (max-width: 448px) {
+  .section-title {
+   margin: 0 1rem;
+  }
+}
+
+/**owl carousel**/
+.owl-item .service-card {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0.7;
+    transform: scale(0.9);
+}
+.owl-item.active.center .service-card {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.owl-nav button {
+    background-color: #ffffff !important; /* Indigo-500 */
+    color: white !important;
+    border-radius: 9999px !important; /* Full rounded */
+    width: 48px !important;
+    height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.5rem !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.owl-nav .owl-prev {
+    left: -60px; /* Position further left */
+}
+.owl-nav .owl-next {
+    right: -60px; /* Position further right */
+}
+.owl-nav button:hover {
+    background-color: #ffffff !important; /* Indigo-600 */
+}
+.owl-dots {
+    margin-top: 2rem !important;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+.owl-dots .owl-dot span {
+    background: #4b5563 !important; /* Gray-600 */
+    width: 12px !important;
+    height: 12px !important;
+    margin: 0 !important;
+    border-radius: 50% !important;
+    transition: background 0.3s ease-in-out;
+}
+.owl-dots .owl-dot.active span {
+    background: #ffffff !important; /* Indigo-500 */
+}
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .owl-nav .owl-prev {
+        left: 10px;
+    }
+    .owl-nav .owl-next {
+        right: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .owl-nav {
+        display: none; /* Hide navigation arrows on smaller screens */
+    }
+}
+
+.card.service-card {
+    position: relative;
+    border-radius: 0;
+    background-size: cover;
+    background-position: center;
+    height: 42rem;
+    max-width: 62.5rem;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+
+@media (max-width: 768px) {
+    .card.service-card  {
+        height: 21rem; /* Hide navigation arrows on smaller screens */
+    }
+}
+
+.card-body.service-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3.5rem;
+}
+.service-title{
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.75rem; /* 137.5% */
+    letter-spacing: -0.03125rem;
+}
+.service-subtitle{
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem; /* 140% */
+    max-width: 50rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .card-body.service-body {
+        padding: 0.5rem;
+    }
+    .service-title  {
+        font-size: 1.25rem;
+        line-height: 1rem;
+    }
+    .service-subtitle  {
+        font-size: 0.85rem;
+        line-height: 1rem;
+    }
+}
+
+.service-btn {
+    position: absolute; /* Allows precise positioning relative to .service-card */
+    top: 50%; /* Vertically centers the button */
+    right: 3.5rem; /* Adjusted to make it slightly outside/overlapping the card */
+    transform: translateY(-50%); /* Adjusts for the button's own height to perfectly center */
+    display: block; /* Ensures padding and margin work correctly */
+    padding: 1rem 2rem;
+    background-color: #FFFFFF;
+    color: #101010;
+    font-family: "Space Grotesk";
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #FFF;
+    transition: all 0.3s ease; /* Smooth hover effect */
+    /* This clip-path creates the angled bottom-right corner of the button */
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 85% 100%, 0 100%);
+    z-index: 1; /* Ensures the button is above the card background */
+}
+
+/* Hover effect for the button */
+.service-btn:hover {
+    background-color: #FFF;
+    color: #000;
+}
+
+/* Responsive adjustments for the button */
+@media (max-width: 768px) {
+    .service-btn {
+        top: 50%;
+        right: -0.5rem; /* Further adjustment for smaller screens to maintain overlap */
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+
+.schedule-section{
+    padding: 6.25rem;
+}
+
+@media (max-width: 448px) {
+  .schedule-section {
+   padding: 6.25rem 1rem;
+  }
+}
+
+.schedule-title{
+    font-family: "Michroma";
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.5rem; /* 140% */
+    letter-spacing: -0.0625rem;
+    color: #FFFFFF;
+    max-width: 87.5rem;
+    margin: 0 12.25rem;
+}
+
+@media (max-width: 998px) {
+  .schedule-title {
+   margin: 0 1rem;
+  }
+}
+
+@media (max-width: 448px) {
+  .schedule-title {
+   margin: 0 1rem;
+  }
+}
+
+
+.mySwiper, .mySwiper-reverse {
+  width: 100%;
+  max-height: 33.15rem; /* Adjust height as needed to fit two rows */
+  margin-top: 0.625rem;
+}
+
+.swiper-slide {
+  width: auto !important;
+  height: auto !important;
+  overflow: hidden;
+}
+
+.swiper-image1,
+.swiper-image2 {
+  display: block;
+  object-fit: cover;
+  height: 33.125rem;
+  filter: grayscale(100%);
+}
+
+.swiper-image1 {
+  width: 66.25rem;
+}
+
+.swiper-image2 {
+  width: 33.125rem;
+}
+
+@media (max-width: 480px) {
+  .swiper-image1,
+  .swiper-image2 {
+    height: 16rem; /* Restore the original height */
+  }
+
+  /* Here we re-introduce the alternating widths for larger screens */
+  .swiper-image1 {
+    width: 16rem;
+  }
+
+  .swiper-image2 {
+    width: 16rem;
+  }
+}
+
+
+/* Optional: Style for navigation and pagination to match your theme */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+
+.swiper-pagination-bullet {
+  background: #fff;
+}
+
+
+/**FOOTER**/
+footer{
+
+}
+
+.card.footer-card{
+    padding: 3rem;
+    background: #000;
+    border: none;
+    border-radius: 0;
+}
+
+.footer-links{
+    margin-top: 2rem;
+}
+
+/* --- Navigation Base Styles --- */
+.main-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /*justify-content: center;
+  align-items: center;*/
+}
+
+.main-nav li {
+  /*margin: 0 10px;*/
+}
+
+.main-nav a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: #FFF;
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    font-family: "Space Grotesk";
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 2.1rem */
+    letter-spacing: -0.0175rem;
+}
+
+.main-nav a:hover {
+  color: #828D91;
+}
+
+.main-nav .separator {
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+  }
+
+  .main-nav li {
+    margin: 10px 0;
+  }
+
+  .main-nav a {
+    font-size: 1.5rem;
+  }
+
+  .main-nav .separator {
+    display: none;
+  }
+}
+
+.cat-title{
+    color: #828D91;
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    font-family: "Space Grotesk";
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 0.875rem */
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+}
+
+.cat-title1{
+    color: #828D91;
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    font-family: "Space Grotesk";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 1.225rem */
+    text-decoration: none;
+}
+.cat-container{
+    gap: 1.5rem;
+
+}
+
+.cat-title2{
+    color: #C2B77C;
+    font-family: "Space Grotesk";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 1.225rem */
+}
+
+.cat-title3{
+    color: #828D91;
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    font-family: "Space Grotesk";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 1.225rem */
+}
+
+.div2{
+    margin-top: 2rem;
+}
+
+.cat-title4 {
+    display: block;
+    color: #FFF;
+    text-align: right;
+    font-family: "Space Grotesk";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 1.225rem */
+    text-decoration: none;
+}
+
+.cat-container1{
+}
+
+.copy-card{
+    background: rgba(27, 27, 27, 0.40);
+    display: flex;
+    padding: 1rem 3rem;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+    justify-content: space-between;
+}
+
+.copy-title{
+    color: #828D91;
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    font-family: "Space Grotesk";
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 1.05rem */
+    margin: 0;
+}
+
+@media (max-width: 448px) {
+  .cat-title4 {
+   text-align: left;
+  }
+}
+
+.schedule-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* align rows to the right */
+  margin-top: 5rem;
+}
+
+.event-row {
+  width: 58rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #373737;
+  padding: 2.25rem 0;
+}
+.date-box,
+.event-info,
+.event-location {
+  flex: 1; /* each takes 1/3 width */
+}
+
+.event-row:first-child {
+  border-top: 1px solid #373737;
+}
+
+.date-box {
+    display: inline-flex;
+    flex-direction: row; /* Change to row for horizontal layout */
+    align-items: flex-start;
+    gap: 1rem; /* Add some space between the day and the month */
+}
+
+.day {
+    color: #F5F5F5;
+    font-family: "Space Grotesk";
+    font-size: 2.875rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.875rem; /* 100% */
+    letter-spacing: -0.07188rem;
+}
+
+.month {
+    color: #F5F5F5;
+    font-family: "Space Grotesk";
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.125rem; /* 120% */
+    letter-spacing: 0.01406rem;
+}
+
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0; /* remove old margin */
+}
+
+.event-title {
+    color: #F5F5F5;
+    font-family: "Space Grotesk";
+    font-size: 1.0625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.24938rem; /* 117.588% */
+}
+
+.event-artist {
+    color: #F5F5F5;
+    font-family: "Space Grotesk";
+    font-size: 1.0625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.24938rem; /* 117.588% */
+}
+
+.event-location {
+  display: flex;
+  justify-content: flex-end; /* keep aligned right */
+  gap: 0.5rem;
+}
+
+.city {
+    color: #C2B77C;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.37438rem; /* 146.6% */
+}
+
+.state{
+    color: #CCC;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.37438rem; /* 146.6% */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .event-row {
+    width: 100%;
+  }
+}

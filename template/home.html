@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Vibe and Vision Productions{% endblock %}
+
+    {% block content %}
+
+    <section class="header">
+
+        <div class="card header-card">
+          <video class="card-video-bg" autoplay muted loop playsinline>
+            <source src="{% static 'videos/header-intro.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <div class="gradient-overlay"></div>
+
+          <div class="card-img-overlay">
+            <h1 class="hero-title">epic events unmatched energy</h1>
+            <p class="hero-subtitle">Comprehensive Audio Visual Services in Austin, Texas</p>
+            <button type="button" class="btn book-btn">BOOK NOW</button>
+          </div>
+        </div>
+
+    </section>
+
+
+<!--    <section class="service-section">-->
+<!--        <h1 class="section-title">OUR SERVICES</h1>-->
+<!--        <div class="service-cards-section" style="margin-top: 5rem;">-->
+<!--            <div class="card service-card" style="background-image: url('{% static 'images/service1.jpg' %}');">-->
+<!--              <div class="card-body">-->
+<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+    <section class="service-section">
+
+        <h1 class="section-title">Our Services</h1>
+
+        <div class="service-cards-section" style="margin-top: 5rem;">
+            <div class="owl-carousel owl-theme">
+
+                <div class="card service-card" style="background: linear-gradient(197deg, rgba(0, 0, 0, 0) 39.72%, rgba(0, 0, 0, 0.70) 75.99%), url('{% static 'images/service1.jpg' %}') center/cover no-repeat;">
+                    <div class="card-body service-body">
+                        <h3 class="service-title">Corporate Events</h3>
+                        <p class="service-subtitle">Elevate Your Corporate Events with Professional Entertainment Subheadline: From team celebrations to
+                            client galas, we bring the perfect vibe to match your company's vision and create memorable experiences that strengthen connections.
+                        </p>
+                    </div>
+                    <a href="#" class="service-btn">See Details</a>
+                </div>
+
+                <div class="card service-card" style="background: linear-gradient(197deg, rgba(0, 0, 0, 0) 39.72%, rgba(0, 0, 0, 0.70) 75.99%), url('{% static 'images/service2.jpg' %}') center/cover no-repeat;">
+                    <div class="card-body service-body">
+                        <h3 class="service-title">Social Events</h3>
+                        <p class="service-subtitle">From intimate gatherings to epic parties, we bring the energy, creativity, and personal touch that makes your social events extraordinary.
+                        </p>
+                    </div>
+                    <a href="#" class="service-btn">See Details</a>
+                </div>
+
+                <div class="card service-card" style="background: linear-gradient(197deg, rgba(0, 0, 0, 0) 39.72%, rgba(0, 0, 0, 0.70) 75.99%), url('{% static 'images/service3.jpg' %}') center/cover no-repeat;">
+                    <div class="card-body service-body">
+                        <h3 class="service-title">Wedding Events</h3>
+                        <p class="service-subtitle">From ‘I do’ to Last Dance, we create seamless, magical entertainment that brings your wedding vision to life and keeps your celebration unforgettable.
+                        </p>
+                    </div>
+                    <a href="#" class="service-btn">See Details</a>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="schedule-section">
+
+        <h1 class="schedule-title">Scheduled Events</h1>
+
+
+        <div class="schedule-cards">
+            <div class="event-row">
+              <div class="date-box">
+                <div class="day">17</div>
+                <div class="month">Jul</div>
+              </div>
+              <div class="event-info">
+                <div class="event-title">Wonderland Beats Festival</div>
+                <div class="event-artist">Graham Donovan</div>
+              </div>
+              <div class="event-location">
+                <span class="city">Miami</span>
+                <span class="state">Florida</span>
+              </div>
+            </div>
+
+            <div class="event-row">
+              <div class="date-box">
+                <div class="day">18</div>
+                <div class="month">Jul</div>
+              </div>
+              <div class="event-info">
+                <div class="event-title">Wonderland Beats Festival</div>
+                <div class="event-artist">Graham Donovan</div>
+              </div>
+              <div class="event-location">
+                <span class="city">Miami</span>
+                <span class="state">Florida</span>
+              </div>
+            </div>
+
+            <div class="event-row">
+              <div class="date-box">
+                <div class="day">21</div>
+                <div class="month">Jul</div>
+              </div>
+              <div class="event-info">
+                <div class="event-title">Wonderland Beats Festival</div>
+                <div class="event-artist">Graham Donovan</div>
+              </div>
+              <div class="event-location">
+                <span class="city">Miami</span>
+                <span class="state">Florida</span>
+              </div>
+            </div>
+
+            <div class="event-row">
+              <div class="date-box">
+                <div class="day">22</div>
+                <div class="month">Jul</div>
+              </div>
+              <div class="event-info">
+                <div class="event-title">Wonderland Beats Festival</div>
+                <div class="event-artist">Graham Donovan</div>
+              </div>
+              <div class="event-location">
+                <span class="city">Miami</span>
+                <span class="state">Florida</span>
+              </div>
+            </div>
+
+            <div class="event-row">
+              <div class="date-box">
+                <div class="day">27</div>
+                <div class="month">Jul</div>
+              </div>
+              <div class="event-info">
+                <div class="event-title">Wonderland Beats Festival</div>
+                <div class="event-artist">Graham Donovan</div>
+              </div>
+              <div class="event-location">
+                <span class="city">Miami</span>
+                <span class="state">Florida</span>
+              </div>
+            </div>
+          </div>
+
+
+
+    </section>
+
+
+    <section class="schedule-section">
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <a href="{% static 'images/service3.jpg' %}" data-lightbox="gallery"><img src="{% static 'images/service3.jpg' %}" alt="Image 1" class="swiper-image2"></a>
+              </div>
+                <div class="swiper-slide">
+                    <a href="{% static 'images/service2.jpg' %}" data-lightbox="gallery"><img src="{% static 'images/service2.jpg' %}" alt="Image 1" class="swiper-image1"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{% static 'images/service1.jpg' %}" data-lightbox="gallery"><img src="{% static 'images/service1.jpg' %}" alt="Image 1" class="swiper-image2"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{% static 'images/service3.jpg' %}" data-lightbox="gallery"><img src="{% static 'images/service3.jpg' %}" alt="Image 1" class="swiper-image1"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{% static 'images/service2.jpg' %}" data-lightbox="gallery"><img src="{% static 'images/service2.jpg' %}" alt="Image 1" class="swiper-image2"></a>
+                </div>
+
+          </div>
+<!--          <div class="swiper-pagination"></div>-->
+<!--          <div class="swiper-button-next"></div>-->
+<!--          <div class="swiper-button-prev"></div>-->
+        </div>
+
+        <div class="swiper mySwiper-reverse">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                  <a href="{% static 'images/service3.jpg' %}" data-lightbox="gallery"><img src="{% static 'images/service3.jpg' %}" alt="Image 1" class="swiper-image1"></a>
+              </div>
+                <div class="swiper-slide">
+                    <a href="{% static 'images/service2.jpg' %}" data-lightbox="gallery"><img src="{% static 'images/service2.jpg' %}" alt="Image 1" class="swiper-image2"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{% static 'images/service1.jpg' %}" data-lightbox="gallery"><img src="{% static 'images/service1.jpg' %}" alt="Image 1" class="swiper-image1"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{% static 'images/service3.jpg' %}" data-lightbox="gallery"><img src="{% static 'images/service3.jpg' %}" alt="Image 1" class="swiper-image2"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{% static 'images/service2.jpg' %}" data-lightbox="gallery"><img src="{% static 'images/service2.jpg' %}" alt="Image 1" class="swiper-image1"></a>
+                </div>
+
+          </div>
+<!--          <div class="swiper-pagination"></div>-->
+<!--          <div class="swiper-button-next"></div>-->
+<!--          <div class="swiper-button-prev"></div>-->
+        </div>
+
+    </section>
+
+
+
+    {% endblock %}
