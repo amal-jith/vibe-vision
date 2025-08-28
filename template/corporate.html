@@ -1,0 +1,460 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Corporate Events | Vibe and Vision Productions{% endblock %}
+
+    {% block content %}
+
+    <!--NAV HEADER-->
+    <div class="fixed-top" id="main-header">
+      <div class="top-bar d-none d-md-flex text-white">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+          <div class="contact-info">
+            <div class="top-bar-item">
+              <img src="{% static 'icons/ic_baseline-phone.png' %}"> <div class="top-bar-text">+512-522-1798</div>
+            </div>
+            <div class="top-bar-item">
+              <img src="{% static 'icons/material-symbols_mail.png' %}"> <div class="top-bar-text">VVProductionsATX@gmail.com</div>
+            </div>
+          </div>
+          <div class="social-icons">
+            <a href="#" class="text-white"><img src="{% static 'icons/ri_instagram-fill.svg' %}"></a>
+            <a href="#" class="text-white"><img src="{% static 'icons/mdi_linkedin.svg' %}"></a>
+            <a href="#" class="text-white"><img src="{% static 'icons/ic_baseline-facebook.svg' %}"></a>
+            <a href="#" class="text-white"><img src="{% static 'icons/mdi_youtube.svg' %}"></a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-expand-lg" id="main-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'vibeApp:home' %}">
+            <img src="{% static 'images/VibeVisionLogo.png' %}" class="v-logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'vibeApp:about' %}">ABOUT US</a>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                     data-bs-toggle="dropdown" aria-expanded="false">
+                    SERVICES
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a class="dropdown-item" href="{% url 'vibeApp:corporate' %}">CORPORATE EVENTS</a></li>
+                    <li><a class="dropdown-item" href="{% url 'vibeApp:social' %}">SOCIAL EVENTS</a></li>
+                    <li><a class="dropdown-item" href="{% url 'vibeApp:weddings' %}">WEDDINGS</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+    <section class="header-other">
+
+      <div class="card other-card" style="background-image: url('{% static 'images/corporate-hero.webp' %}');">
+
+        <div class="card-img-overlay other-overlay">
+          <div class="container">
+            <h1 class="hero-title-corporate">Elevate Your Corporate Events with Professional Entertainment</h1>
+          <p class="hero-subtitle-corporate">From team celebrations to client galas, we bring the perfect vibe to match your company's vision and create memorable experiences that strengthen connections.</p>
+          <button type="button" class="btn book-btn">BOOK NOW</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="what-section" style="background-image: url('{% static 'images/dj-back.png' %}')">
+      <div class="container">
+        <h1 class="what-title">What to Expect</h1>
+
+        <div class="card expect-section">
+
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col-md-5">
+              <div class="card-border-wrapper">
+                  <div class="card expect-card" style="background-image: url('{% static 'images/dj.png' %}')"></div>
+              </div>
+            </div>
+
+            <div class="col-md-7">
+
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card expect-service-card h-100">
+                    <img src="{% static 'icons/disc-3.svg' %}" class="service-icon" alt="...">
+                    <div class="card-body p-0">
+                      <h3 class="expect-service-title">DJ SERVICES</h3>
+                      <p class="expect-service-subtitle">From team celebrations to client galas, we bring the perfect vibe to match your company's vision and create memorable experiences that strengthen connections.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card expect-service-card h-100">
+                    <img src="{% static 'icons/eclipse.svg' %}" class="service-icon" alt="...">
+                    <div class="card-body p-0">
+                      <h3 class="expect-service-title">Lighting & Ambiance</h3>
+                      <p class="expect-service-subtitle">From team celebrations to client galas, we bring the perfect vibe to match your company's vision and create memorable experiences that strengthen connections.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card expect-service-card h-100">
+                    <img src="{% static 'icons/aperture.svg' %}" class="service-icon" alt="...">
+                    <div class="card-body p-0">
+                      <h3 class="expect-service-title">Photo Booths</h3>
+                      <p class="expect-service-subtitle">From team celebrations to client galas, we bring the perfect vibe to match your company's vision and create memorable experiences that strengthen connections.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card-wrapper-expect-service">
+                    <div class="card expect-service-card h-100">
+                      <img src="{% static 'icons/disc-4.svg' %}" class="service-icon" alt="...">
+                      <div class="card-body p-0">
+                        <h3 class="expect-service-title">Audio/VisuaL</h3>
+                        <p class="expect-service-subtitle">From team celebrations to client galas, we bring the perfect vibe to match your company's vision and create memorable experiences that strengthen connections.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <div class="events-main-section" style="background-image: url('{% static 'images/section-bg-2.png' %}')">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-center text-center text-md-start">
+          <h1 class="div-title-2">Events We’ve Mastered</h1>
+          <p class="div-subtitle-2">
+            From team celebrations to client galas, we bring the perfect vibe to match your company's vision and create memorable experiences that strengthen connections.
+          </p>
+        </div>
+
+        <div class="" style="margin-top: 5rem;">
+          <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+              <div class="card-event-wrapper">
+                  <div class="card event-card" style="background-image: url('{% static 'images/holiday-parties.webp' %}')">
+                    <h3 class="event-text">Holiday Parties</h3>
+                  </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card-event-wrapper">
+                  <div class="card event-card" style="background-image: url('{% static 'images/award-ceremony.webp' %}')">
+                    <h3 class="event-text">Award Ceremony</h3>
+                  </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card-event-wrapper">
+                  <div class="card event-card" style="background-image: url('{% static 'images/team-building.webp' %}')">
+                    <h3 class="event-text">Team Building</h3>
+                  </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card-event-wrapper">
+                  <div class="card event-card" style="background-image: url('{% static 'images/corporate-galas.webp' %}')">
+                    <h3 class="event-text">Corporate Galas</h3>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h1 class="div-title-3">and much much more!</h1>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="events-main-section" style="background-image: url('{% static 'images/section-bg-2.png' %}')">
+      <div class="container">
+        <div class="">
+          <h1 class="div-title-4">Corporate Entertainment Packages</h1>
+        </div>
+
+        <div class="" style="margin-top: 5rem;">
+          <div class="row row-cols-1 row-cols-md-3 g-4 align-items-stretch">
+            <div class="col">
+              <div class="card-package-wrapper h-100">
+                  <div class="card package-card h-100">
+                    <div class="package-bg">
+                      <img src="{% static 'icons/party-popper.svg' %}" class="package-icon" alt="...">
+                    </div>
+                    <div class="card-body p-0">
+                      <div style="margin-top: 1.8rem;">
+                        <h3 class="package-title-1">Essential Corporate</h3>
+                        <p class="package-title-2">Perfect for smaller teams</p>
+                      </div>
+                      <div style="margin-top: 2.4rem; text-align: left;">
+                        <h3 class="package-title-3">Plans starts at</h3>
+                        <p class="package-title-4">$5200</p>
+                      </div>
+                      <hr style="color: rgba(255, 255, 255, 0.24); margin: 3rem 0;">
+                      <div>
+                        <h3 class="package-title-5">Upto 50 guests</h3>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Professional DJ (4 hrs)</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Basic lighting setup</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Wireless microphone</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Custom corporate playlist</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Timeline planning</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card-package-wrapper h-100">
+                  <div class="card package-card h-100">
+                    <div class="package-bg">
+                      <img src="{% static 'icons/gem.svg' %}" class="package-icon" alt="...">
+                    </div>
+                    <div class="card-body p-0">
+                      <div style="margin-top: 1.8rem;">
+                        <h3 class="package-title-1">Professional Corporate</h3>
+                        <p class="package-title-2">Most popular choice</p>
+                      </div>
+                      <div style="margin-top: 2.4rem; text-align: left;">
+                        <h3 class="package-title-3">Plans starts at</h3>
+                        <p class="package-title-4">$10200</p>
+                      </div>
+                      <hr style="color: rgba(255, 255, 255, 0.24); margin: 3rem 0;">
+                      <div>
+                        <h3 class="package-title-5">Upto 150 guests</h3>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Professional DJ (6 hrs)</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Enhanced lighting</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Wireless microphones (2)</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Photo booth included</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Basic AV support</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Event coordination</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card-package-wrapper h-100">
+                  <div class="card package-card h-100">
+                    <div class="package-bg">
+                      <img src="{% static 'icons/crown.svg' %}" class="package-icon" alt="...">
+                    </div>
+                    <div class="card-body p-0">
+                      <div style="margin-top: 1.8rem;">
+                        <h3 class="package-title-1">Premium Corporate</h3>
+                        <p class="package-title-2">Ultimate experience</p>
+                      </div>
+                      <div style="margin-top: 2.4rem; text-align: left;">
+                        <h3 class="package-title-3">Plans starts at</h3>
+                        <p class="package-title-4">$12200</p>
+                      </div>
+                      <hr style="color: rgba(255, 255, 255, 0.24); margin: 3rem 0;">
+                      <div>
+                        <h3 class="package-title-5">150+ guests</h3>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Professional DJ (8 hrs)</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Full lighting transformation</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Multiple wireless mics</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Premium photo booth</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Full AV production</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Dedicated event coordinator</p>
+                        </div>
+                        <div class="upto-section">
+                          <img src="{% static 'icons/grammerly.svg' %}" class="icon-tick-icon"><p class="package-title-5">Backup DJ coverage</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <section class="moments-main-section" style="background-image: url('{% static 'images/section-bg-2.png' %}')">
+
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card-moments-border-wrapper">
+                <div class="card moments-card" style="background-image: url('{% static 'images/unforgettable-moment.webp' %}')"></div>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <h2 class="moments-text">We Create <span>Unforgettable</span> Moments!</h2>
+              <p class="moments-subtext">Founded in 2009 by Aaron Waldock, Vibe & Vision Productions began with a passion for music and entertainment.
+                Starting as a karaoke host, Aaron honed his DJ skills at Dub Academy in Austin, Texas, later gaining experience in the city’s
+                vibrant 6th Street club scene. His love for creating unforgettable moments was sparked when he DJed a friend’s wedding,
+                inspiring him to build a company that blends high-energy music with personalized event experiences.
+              </p>
+              <button type="button" class="btn book-btn">VIEW GALLERY</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="test-main-section" style="background-image: url('{% static 'images/section-bg-2.png' %}')">
+
+        <div class="container">
+          <div class="d-flex flex-column flex-md-row align-items-center justify-content-center text-center text-md-start">
+            <h1 class="div-title-2">Hear from our <span>lovely</span> clients!</h1>
+            <p class="div-subtitle-2">
+              From team celebrations to client galas, we bring the perfect vibe to match your company's vision and create memorable experiences that strengthen connections.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-5">
+
+            <div class="">
+              <div class="owl-carousel owl-theme testimonial-carousel">
+                <div class="item">
+                  <div class="card testimonial-card">
+                    <div class="card-body p-0">
+                      <h3 class="">VV Productions made our annual holiday party absolutely perfect. Aaron's team
+                        understood exactly what we needed - professional entertainment that would appeal to everyone from our 22-year-old
+                        interns to our executive team. The photo booth was a huge hit, and the lighting transformed our office space into
+                        something magical. Three months later, people are still talking about it!
+                      </h3>
+                      <hr style="color: rgba(255, 255, 255, 1); margin: 1rem 0;">
+                      <p class="subtitle-6">Michelle Chen</p>
+                      <p class="subtitle-7">Co-Founder, GrowthHack Industries</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="card testimonial-card">
+                    <div class="card-body p-0">
+                      <h3 class="">VV Productions made our annual holiday party absolutely perfect. Aaron's team
+                        understood exactly what we needed - professional entertainment that would appeal to everyone from our 22-year-old
+                        interns to our executive team. The photo booth was a huge hit, and the lighting transformed our office space into
+                        something magical. Three months later, people are still talking about it!
+                      </h3>
+                      <hr style="color: rgba(255, 255, 255, 1); margin: 1rem 0;">
+                      <p class="subtitle-6">Michelle Chen</p>
+                      <p class="subtitle-7">Co-Founder, GrowthHack Industries</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="card testimonial-card">
+                    <div class="card-body p-0">
+                      <h3 class="">VV Productions made our annual holiday party absolutely perfect. Aaron's team
+                        understood exactly what we needed - professional entertainment that would appeal to everyone from our 22-year-old
+                        interns to our executive team. The photo booth was a huge hit, and the lighting transformed our office space into
+                        something magical. Three months later, people are still talking about it!
+                      </h3>
+                      <hr style="color: rgba(255, 255, 255, 1); margin: 1rem 0;">
+                      <p class="subtitle-6">Michelle Chen</p>
+                      <p class="subtitle-7">Co-Founder, GrowthHack Industries</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="card testimonial-card">
+                    <div class="card-body p-0">
+                      <h3 class="">VV Productions made our annual holiday party absolutely perfect. Aaron's team
+                        understood exactly what we needed - professional entertainment that would appeal to everyone from our 22-year-old
+                        interns to our executive team. The photo booth was a huge hit, and the lighting transformed our office space into
+                        something magical. Three months later, people are still talking about it!
+                      </h3>
+                      <hr style="color: rgba(255, 255, 255, 1); margin: 1rem 0;">
+                      <p class="subtitle-6">Michelle Chen</p>
+                      <p class="subtitle-7">Co-Founder, GrowthHack Industries</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container">
+                <div class="owl-progress-bar">
+                <div class="owl-progress"></div>
+              </div>
+              </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <section class="footer-event-section" style="background-image: url('{% static 'images/section-bg-2.png' %}')">
+      <div class="container">
+        <div class="card footer-above-section" style="background: linear-gradient(196deg, rgba(3, 2, 1, 0.16) 39.89%, rgba(3, 2, 1, 0.80) 72.45%), url('{% static 'images/book-card.webp' %}') center/cover no-repeat;">
+          <div class="card-content">
+            <h2>Make Your Event Unforgettable!</h2>
+            <p>Let the music set the vibe—book our services today!</p>
+            <button type="button" class="btn book-btn-white">BOOK NOW</button>
+          </div>
+        </div>
+    </div>
+    </section>
+
+
+    {% endblock %}

@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gallery | Vibe and Vision Productions{% endblock %}
+
+    {% block content %}
+
+    <!--NAV HEADER-->
+    <div class="fixed-top" id="main-header">
+      <div class="top-bar d-none d-md-flex text-white">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+          <div class="contact-info">
+            <div class="top-bar-item">
+              <img src="{% static 'icons/ic_baseline-phone.png' %}"> <div class="top-bar-text">+512-522-1798</div>
+            </div>
+            <div class="top-bar-item">
+              <img src="{% static 'icons/material-symbols_mail.png' %}"> <div class="top-bar-text">VVProductionsATX@gmail.com</div>
+            </div>
+          </div>
+          <div class="social-icons">
+            <a href="#" class="text-white"><img src="{% static 'icons/ri_instagram-fill.svg' %}"></a>
+            <a href="#" class="text-white"><img src="{% static 'icons/mdi_linkedin.svg' %}"></a>
+            <a href="#" class="text-white"><img src="{% static 'icons/ic_baseline-facebook.svg' %}"></a>
+            <a href="#" class="text-white"><img src="{% static 'icons/mdi_youtube.svg' %}"></a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-expand-lg" id="main-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'vibeApp:home' %}">
+            <img src="{% static 'images/VibeVisionLogo.png' %}" class="v-logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'vibeApp:corporate' %}">CORPORATE EVENTS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'vibeApp:social' %}">SOCIAL EVENTS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'vibeApp:weddings' %}">WEDDINGS</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+
+    <section class="header-other">
+
+        <div class="card header-card" style="height: 0dvh; min-height: 30rem;">
+          <video class="card-video-bg" autoplay muted loop playsinline>
+            <source src="{% static 'videos/header-intro.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <div class="gradient-overlay"></div>
+
+          <div class="card-img-overlay" style="align-items: center;">
+            <h1 class="hero-title-corporate text-center" style="max-width: none;">GALLERY</h1>
+            <p class="hero-subtitle-corporate text-center" style="max-width: none;">MOMENTS WE HOLD DEAR</p>
+          </div>
+        </div>
+
+    </section>
+
+    <div class="container my-4">
+
+        <!-- Row 1: Video -->
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="clip video">
+              <img src="{% static 'images/award-ceremony.webp' %}" alt="Video">
+              <div class="play-btn"><img src="{% static 'icons/circle-play.svg' %}"> </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: 3 images -->
+        <div class="row mb-3">
+          <div class="col-md-4 col-12">
+            <div class="clip"><img src="{% static 'images/award-ceremony.webp' %}" alt=""></div>
+          </div>
+          <div class="col-md-4 col-12">
+            <div class="clip"><img src="{% static 'images/award-ceremony.webp' %}" alt=""></div>
+          </div>
+          <div class="col-md-4 col-12">
+            <div class="clip"><img src="{% static 'images/award-ceremony.webp' %}" alt=""></div>
+          </div>
+        </div>
+
+        <!-- Row 3: 3 images -->
+        <div class="row">
+          <div class="col-md-4 col-12">
+            <div class="clip"><img src="{% static 'images/award-ceremony.webp' %}" alt=""></div>
+          </div>
+          <div class="col-md-4 col-12">
+            <div class="clip"><img src="{% static 'images/award-ceremony.webp' %}" alt=""></div>
+          </div>
+          <div class="col-md-4 col-12">
+            <div class="clip"><img src="{% static 'images/award-ceremony.webp' %}" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+
+
+    {% endblock %}
