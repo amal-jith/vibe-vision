@@ -4,7 +4,7 @@ $(document).ready(function(){
         loop: false, /* Changed from true to false */
         margin: 20, /* Added margin between items */
         nav: true,
-        dots: true,
+        dots:false,
         responsive:{
             0:{
                 items:1,
