@@ -280,11 +280,13 @@ body{
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 0.93688rem; /* 93.687% */
     letter-spacing: 0.05156rem;
     text-transform: uppercase;
     border-radius: 0 !important;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 25px) 100%, 0 100%);
+    display: flex;
+    align-items: center; /* Vertically centers the text */
+    justify-content: center;
 }
 
 .service-section{
@@ -976,7 +978,7 @@ footer{
 
 @media (max-width: 448px) {
   .what-title {
-   margin: 0 1rem;
+   margin: 0 0rem;
   }
 }
 
@@ -1098,7 +1100,7 @@ footer{
     background-blend-mode: normal, hard-light;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 65%;
+    background-size: cover;
 }
 
 
@@ -1126,7 +1128,7 @@ footer{
 
 @media (max-width: 448px) {
   .div-title-2 {
-   margin: 0 1rem;
+   margin: 0 0rem;
   }
 }
 
@@ -1140,6 +1142,13 @@ footer{
     letter-spacing: 0.03406rem;
     text-transform: uppercase;
     max-width: 42.5rem;
+}
+
+@media (max-width: 448px) {
+  .div-subtitle-2 {
+   text-align: left !important;
+   margin-top: 1rem;
+  }
 }
 
 .card-event-wrapper {
@@ -1224,6 +1233,7 @@ footer{
     text-transform: uppercase;
     margin-top: 2.5rem;
     cursor: default;
+
 }
 
 .div-title-4{
@@ -1237,6 +1247,14 @@ footer{
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    max-width: 87rem;
+}
+
+@media (max-width: 480px) {
+  .div-title-4 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
 }
 
 /***PACKAGES**/
@@ -1392,7 +1410,7 @@ footer{
     background-blend-mode: normal, hard-light;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 50%;
+    background-size: cover;
 }
 
 .card-moments-border-wrapper {
@@ -1450,6 +1468,8 @@ footer{
     -webkit-text-fill-color: transparent;
 }
 
+
+
 .moments-text span{
     background: linear-gradient(91deg, #7E6F3D -14.74%, #BBAF76 12.97%, #7E6F3D 40.67%);
     background-clip: text;
@@ -1461,6 +1481,17 @@ footer{
     font-weight: 400;
     line-height: 5rem;
     letter-spacing: -0.0625rem;
+}
+
+@media (max-width: 448px) {
+  .moments-text{
+   font-size: 2.5rem;
+   line-height: 4rem;
+  }
+  .moments-text span{
+   font-size: 2.5rem;
+   line-height: 4rem;
+  }
 }
 
 .moments-subtext{
@@ -1479,7 +1510,7 @@ footer{
     background-blend-mode: normal, hard-light;
     background-repeat: no-repeat;
     background-position: right -13% top 108%;
-    background-size: 80%;
+    background-size: cover;
 }
 
 
@@ -1568,7 +1599,8 @@ footer{
     background-blend-mode: normal, hard-light;
     background-repeat: no-repeat;
     background-position: right 35% bottom 45%;
-    background-size: 30%;
+    background-size: cover;
+    min-height: 40vh;
 }
 
 
