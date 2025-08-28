@@ -140,6 +140,28 @@ body{
     color: #FFF;
 }
 
+.navbar-nav .nav-link.show{
+    color: #FFFFFF !important;
+}
+
+.navbar .dropdown-menu {
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  backdrop-filter: blur(10px);     /* blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* subtle border */
+  border-radius: 0.75rem; /* rounded corners */
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  color: #fff;
+}
+
+/* Hover effect for dropdown items */
+.navbar .dropdown-menu .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff; /* example hover accent */
+}
+
 .offcanvas{
     background: rgba(0, 0, 0, 0.40);
 }
@@ -262,7 +284,6 @@ body{
     letter-spacing: 0.05156rem;
     text-transform: uppercase;
     border-radius: 0 !important;
-
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 25px) 100%, 0 100%);
 }
 
@@ -277,9 +298,12 @@ body{
     font-weight: 400;
     line-height: 3.5rem; /* 140% */
     letter-spacing: -0.0625rem;
-    color: #FFFFFF;
     max-width: 87.5rem;
     margin: 0 12.25rem;
+    background: linear-gradient(91deg, #FFF -14.74%, #999 40.67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 998px) {
@@ -472,9 +496,12 @@ body{
     font-weight: 400;
     line-height: 3.5rem; /* 140% */
     letter-spacing: -0.0625rem;
-    color: #FFFFFF;
     max-width: 87.5rem;
     margin: 0 12.25rem;
+    background: linear-gradient(91deg, #FFF -14.74%, #999 40.67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 998px) {
@@ -816,3 +843,873 @@ footer{
     width: 100%;
   }
 }
+
+
+/**CORPORATE**/
+.card.other-card {
+    border: none;
+    position: relative;
+    overflow: hidden;
+    min-height: 42rem;
+    height: 40dvh;
+    background-size: cover;
+    background-position: center;
+}
+
+.card.other-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* gradients with transparency so image shows */
+    background: linear-gradient(249deg, rgba(0, 0, 0, 0) 36.27%, rgba(0, 0, 0, 18.7) 82.45%),
+                linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 6.7) 100%),
+                linear-gradient(0deg, rgba(232, 202, 145, 0.2) 0%, rgba(232, 202, 145, 0.2) 100%);
+    background-blend-mode: normal, normal, color;
+    z-index: 1;
+}
+
+.card.other-card .card-img-overlay {
+    z-index: 2; /* keeps text above gradient */
+}
+
+.card-img-overlay.other-overlay{
+    padding: 0 0 5rem 0;
+}
+
+
+.hero-title-corporate{
+    color: #FFF;
+    font-family: "Michroma";
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 4rem; /* 160% */
+    letter-spacing: 0.03125rem;
+    text-transform: uppercase;
+    cursor: default;
+    margin-bottom: 2rem;
+    max-width: 64.9375rem;
+
+}
+
+@media (max-width: 998px) {
+    .hero-title-corporate {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+}
+
+@media (max-width: 448px) {
+    .hero-title-corporate {
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+
+}
+
+.hero-subtitle-corporate{
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem; /* 171.429% */
+    letter-spacing: 0.03406rem;
+    text-transform: uppercase;
+    cursor: default;
+    margin-bottom: 1.5rem;
+    max-width: 50.875rem;
+}
+
+.what-section{
+    padding: 6.25rem 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.what-section {
+  position: relative;
+  overflow: hidden; /* keeps blur inside */
+  z-index: 0;
+}
+
+.what-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  filter: blur(40px) brightness(0.5);
+  z-index: -1;
+}
+
+/* Optional: gradient overlay for better text contrast */
+.what-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+  z-index: -1;
+}
+
+
+
+.what-title{
+    font-family: "Michroma";
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 4rem; /* 100% */
+    letter-spacing: -0.0625rem;
+    max-width: 87.5rem;
+    background: linear-gradient(91deg, #FFF -14.74%, #999 40.67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+}
+
+@media (max-width: 998px) {
+  .what-title {
+   margin: 0 1rem;
+  }
+}
+
+@media (max-width: 448px) {
+  .what-title {
+   margin: 0 1rem;
+  }
+}
+
+.card.expect-section{
+    background: none;
+    border-radius: 0;
+    padding:  5rem 0;
+    border: none;
+}
+
+.card-border-wrapper {
+    position: relative;
+    height: 32.5rem;
+    max-width: 32.25rem;
+    background: rgba(194, 183, 124, 0.50);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+
+.card.expect-card {
+    position: absolute;
+    top: 0.8px;
+    left: 0.8px;
+    right: 0.8px;
+    bottom: 0.8px;
+    border-radius: 0;
+    height: calc(100% - 1.6px);
+    width: calc(100% - 1.6px);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+
+@media (max-width: 768px) {
+    .card-border-wrapper, .card.expect-card  {
+        height: 21rem;
+    }
+}
+
+/* Mobile responsive adjustment */
+@media (max-width: 768px) {
+  .card-border-wrapper, .card.expect-card {
+    height: 20rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-border-wrapper, .card.expect-card {
+    height: 15rem;
+  }
+}
+
+
+.card-wrapper-expect-service {
+  max-width: 24rem;
+  position: relative;
+  padding: 2px; /* This padding creates the border effect */
+  background: linear-gradient(0deg, rgba(141, 141, 141, 0.00) 0%, rgba(141, 141, 141, 0.00) 100%), linear-gradient(90deg, rgba(42, 35, 24, 0.20) -17.83%, rgba(42, 38, 27, 0.20) 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+
+.card.expect-service-card {
+  width: 100%; /* Make the card fill the wrapper */
+  height: 100%;
+  background: linear-gradient(0deg, rgba(141, 141, 141, 0.00) 0%, rgba(141, 141, 141, 0.00) 100%), linear-gradient(90deg, rgba(42, 35, 24, 0.20) -17.83%, rgba(42, 38, 27, 0.20) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  padding: 2rem;
+  box-sizing: border-box;
+  border-radius: 0;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+  border-color: rgba(255,255,255,0);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.card.expect-service-card:hover{
+    border-color: rgba(255,255,255,0.3);
+}
+
+
+
+
+.service-icon{
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+
+.expect-service-title{
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2rem; /* 133.333% */
+    letter-spacing: 0.03406rem;
+    text-transform: uppercase;
+    margin-top: 3.5rem;
+}
+
+.expect-service-subtitle{
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 171.429% */
+    letter-spacing: 0.03406rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+
+
+/**EVENTS SECTION**/
+.events-main-section {
+    padding: 6.25rem 0;
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 50%, #000 100%);
+    background-blend-mode: normal, hard-light;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65%;
+}
+
+
+
+.div-title-2{
+    font-family: "Michroma";
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 4rem; /* 100% */
+    letter-spacing: -0.0625rem;
+    max-width: 42.5rem;
+    background: linear-gradient(91deg, #FFF -14.74%, #999 40.67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+}
+
+@media (max-width: 998px) {
+  .div-title-2 {
+   margin: 0 1rem;
+  }
+}
+
+@media (max-width: 448px) {
+  .div-title-2 {
+   margin: 0 1rem;
+  }
+}
+
+.div-subtitle-2{
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem; /* 200% */
+    letter-spacing: 0.03406rem;
+    text-transform: uppercase;
+    max-width: 42.5rem;
+}
+
+.card-event-wrapper {
+    position: relative;
+    height: 32.5rem;
+    background: rgba(194, 183, 124, 0.50);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+
+.card.event-card {
+    position: absolute;
+    top: 0.8px;
+    left: 0.8px;
+    right: 0.8px;
+    bottom: 0.8px;
+    border-radius: 0;
+    height: calc(100% - 1.6px);
+    width: calc(100% - 1.6px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+
+/* Gradient overlay */
+.card.event-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; /* Adjust height to control the gradient area */
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    z-index: 1; /* Make sure the gradient is on top of the image */
+}
+
+/* Text styling */
+.event-text {
+    position: absolute;
+    bottom: 25px; /* Adjust this value to position the text vertically */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Make sure the text is on top of the gradient */
+    color: #FFF;
+    text-align: center;
+    font-family: "Michroma";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.0625rem;
+}
+
+@media (max-width: 768px) {
+    .card-event-wrapper, .card.event-card  {
+        height: 21rem;
+    }
+}
+
+/* Mobile responsive adjustment */
+@media (max-width: 768px) {
+  .card-event-wrapper, .card.event-card {
+    height: 20rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-event-wrapper, .card.event-card {
+    height: 15rem;
+  }
+}
+
+.div-title-3{
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    font-family: "Michroma";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 133.333% */
+    letter-spacing: 0.03406rem;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+    cursor: default;
+}
+
+.div-title-4{
+    font-family: "Michroma";
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 5rem; /* 142.857% */
+    letter-spacing: -0.0625rem;
+    background: linear-gradient(91deg, #FFF -14.74%, #999 40.67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/***PACKAGES**/
+
+
+.card.package-card {
+  position: relative;
+  border-radius: 0;
+  padding: 3rem;
+  background: linear-gradient(
+    195deg,
+    rgba(43, 255, 255, 0.10) 0%,
+    rgba(43, 255, 255, 0.02) 50%,
+    rgba(43, 255, 255, 0.06) 100%
+  );
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /* Safari support */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* optional depth */
+  overflow: hidden;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card.package-card:hover {
+  border: 1px solid #7E6F3D;
+}
+
+@media (max-width: 768px) {
+    .card-event-wrapper, .card.event-card  {
+        height: 21rem;
+    }
+}
+
+/* Mobile responsive adjustment */
+@media (max-width: 768px) {
+  .card-event-wrapper, .card.event-card {
+    height: 20rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-event-wrapper, .card.event-card {
+    height: 15rem;
+  }
+}
+
+.package-bg{
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.74713rem 0.75294rem 0.75288rem 0.74706rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7.485rem;
+    border: 1.198px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.12);
+    transition: background 0.5s ease-in-out;
+}
+
+.package-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+     transition: filter 0.5s ease-in-out;
+}
+
+.package-title-1{
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 1.497rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.09581rem; /* 140% */
+    text-align: left;
+}
+
+.package-title-2{
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 1.04788rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.497rem; /* 142.857% */
+    text-align: left;
+}
+
+.package-title-3{
+    color: rgba(255, 255, 255, 0.80);
+    font-family: "Space Grotesk";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 171.429% */
+}
+.package-title-4{
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 3.59281rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 4.19163rem; /* 116.667% */
+    margin-top: 0.75rem;
+}
+
+.package-title-5{
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 1.19763rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.79644rem; /* 150% */
+    text-align: left;
+}
+
+.upto-section{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.package-title-5{
+    color: rgba(255, 255, 255, 0.80);
+    font-family: "Space Grotesk";
+    font-size: 1.12275rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.64669rem; /* 146.667% */
+    margin: 0;
+}
+
+.icon-tick-icon{
+    width: 1.19763rem;
+    height: 1.19763rem;
+    flex-shrink: 0;
+    margin-right: 0.6rem;
+}
+
+.card.package-card:hover .package-bg {
+  background: linear-gradient(98deg, #7E6F3D -6.2%, #B9AD74 57.32%, #F4ECAB 142.81%), rgba(255, 255, 255, 0.12);
+}
+
+.card.package-card:hover .package-icon {
+  filter: invert(0) brightness(0); /* makes white → black */
+}
+
+
+/***MOMENTS SECTION**/
+.moments-main-section {
+    padding: 6.25rem 0;
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 50%, #000 100%);
+    background-blend-mode: normal, hard-light;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}
+
+.card-moments-border-wrapper {
+    position: relative;
+    height: 32.5rem;
+    max-width: 32.25rem;
+    background: rgba(194, 183, 124, 0.50);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+.card.moments-card {
+    position: absolute;
+    top: 0.8px;
+    left: 0.8px;
+    right: 0.8px;
+    bottom: 0.8px;
+    border-radius: 0;
+    height: calc(100% - 1.6px);
+    width: calc(100% - 1.6px);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+
+@media (max-width: 768px) {
+    .card-moments-border-wrapper, .card.moments-card  {
+        height: 21rem;
+    }
+}
+
+/* Mobile responsive adjustment */
+@media (max-width: 768px) {
+  .card-moments-border-wrapper, .card.moments-card {
+    height: 20rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-moments-border-wrapper, .card.moments-card {
+    height: 15rem;
+  }
+}
+
+
+
+.moments-text{
+    font-family: "Michroma";
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 5rem; /* 142.857% */
+    letter-spacing: -0.0625rem;
+    background: linear-gradient(91deg, #FFF -14.74%, #999 40.67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.moments-text span{
+    background: linear-gradient(91deg, #7E6F3D -14.74%, #BBAF76 12.97%, #7E6F3D 40.67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Michroma;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 5rem;
+    letter-spacing: -0.0625rem;
+}
+
+.moments-subtext{
+    margin-top: 0.94rem;
+    margin-bottom: 1.5rem;
+    color: #CCC;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.625rem; /* 162.5% */
+}
+
+.footer-event-section {
+    padding: 6.25rem 0;
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 50%, #000 100%);
+    background-blend-mode: normal, hard-light;
+    background-repeat: no-repeat;
+    background-position: right -13% top 108%;
+    background-size: 80%;
+}
+
+
+.card.footer-above-section {
+  position: relative;
+  border-radius: 0;
+  border: 1.5px solid rgba(126, 111, 61, 0.24);
+  padding: 3.5rem;
+  color: #fff;
+  min-height: 52rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: left;
+}
+
+
+.card.footer-above-section  .card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.card-content h2{
+    color: #FFF;
+    font-family: "Michroma";
+    font-size: 3.05231rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 141.064%; /* 4.30575rem */
+    text-transform: uppercase;
+    max-width: 56rem;
+}
+
+.card-content p{
+    color: #FFF;
+    text-align: left;
+    font-family: "Space Grotesk";
+    font-size: 1.52619rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.01269rem;
+    text-transform: capitalize;
+    margin-top: 0.76rem;
+}
+
+.btn.book-btn-white{
+    background: #ffffff;
+    color: #00000;
+    max-width: 15rem;
+    height: 4rem;
+    width: 100%;
+    text-align: center;
+    font-family: "Space Grotesk";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 0.93688rem; /* 93.687% */
+    letter-spacing: 0.05156rem;
+    text-transform: uppercase;
+    border-radius: 0 !important;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 25px) 100%, 0 100%);
+}
+
+.btn.book-btn-white{
+    color: #000000;
+}
+
+.div-title-2 span{
+    background: linear-gradient(91deg, #7E6F3D -14.74%, #BBAF76 12.97%, #7E6F3D 40.67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Michroma";
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 5rem;
+    letter-spacing: -0.0625rem;
+}
+
+
+.test-main-section {
+    padding: 6.25rem 0;
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 50%, #000 100%);
+    background-blend-mode: normal, hard-light;
+    background-repeat: no-repeat;
+    background-position: right 35% bottom 45%;
+    background-size: 30%;
+}
+
+
+.testimonial-carousel .owl-item {
+  max-width: 33rem;   /* clamp only testimonial cards */
+  flex: 0 0 auto;     /* prevent stretching */
+}
+
+.card.testimonial-card {
+    width: 100%; /* Make the card fill the wrapper */
+    height: 100%;
+    border-radius: 0;
+    max-width: 33rem;
+    min-height: 18.84375rem;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(23.95209503173828px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+    border-color: rgba(255,255,255,0);
+    transition: border-color 0.3s ease-in-out;
+}
+
+.testimonial-card h3{
+    color: #FFF;
+    /*text-overflow: ellipsis;*/
+    font-family: "Space Grotesk";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.77756rem; /* 158.004% */
+    letter-spacing: -0.00844rem;
+}
+
+.testimonial-card .subtitle-6{
+    color: #FFF;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Space Grotesk";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.01575rem;
+}
+.testimonial-card .subtitle-7{
+    color: #FFF;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Space Grotesk";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.01225rem;
+    margin-top: 1rem;
+}
+
+
+/**OWL PROGRESS**/
+/* Faint background track */
+.owl-progress-bar {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background: rgba(255,255,255,0.1); /* light grey faint line */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Darker moving bar */
+.owl-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0; /* will be updated by JS */
+  background: #ffffff; /* dark fill color */
+  transition: width 0.3s ease;
+}
+
+
+/**gallery**/
+.clip {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+  margin-bottom: 15px;
+}
+
+.clip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  max-height: 37.5rem;
+  z-index: 0;
+}
+
+/* Gradient Overlay */
+.clip::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  pointer-events: none; /* let clicks pass through */
+  z-index: 1;
+}
+
+/* Play button for video */
+.video {
+  position: relative;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.play-btn img{
+    height: 6.25rem;
+    width: 6.25rem;
+}
+
+
+.card.header-card-1 {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  min-height: 40rem;
+  /*height: 100vh;*/
+  height: 100dvh;
+}
+
+
+
