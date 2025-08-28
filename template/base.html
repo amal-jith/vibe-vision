@@ -29,7 +29,7 @@
   <body>
 
     <div class="overflow-hidden">
-        {% include 'navbar.html' %}
+
         {% block content %}{% endblock %}
         {% include 'footer.html' %}
     </div>
@@ -47,10 +47,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <script src="{% static 'js/mainHeader.js' %}"></script>
-    <script src="{% static 'js/owlCarousel.js' %}"></script>
+    <script src="{% static 'js/owlCarousel.js' %}"></script><script src="{% static 'js/testimonialOwl.js' %}"></script>
     <script src="{% static 'js/swiper-init.js' %}"></script>
     <script src="{% static 'js/swiperJs.js' %}"></script>
-    <script src="{% static 'js/heroAnimation.js' %}"></script>
+    <script src="{% static 'js/heroAnimation.js' %}"></script><script src="{% static 'js/scrollHor.js' %}"></script>
     <script src="{% static 'js/serviceSection.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
 
